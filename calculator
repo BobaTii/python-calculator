@@ -1,0 +1,80 @@
+import math
+
+#user input variable
+act = "nothin here"
+
+# the adding function
+def add(x, y):
+  print("~~~~~~~~~~~~~~~~~~~~~~~\n" + str(x) + " + " + str(y) + " = " + str(float(x)+float(y)) + "\n~~~~~~~~~~~~~~~~~~~~~~~")
+
+# the multiplication function
+def multiply(x,y):
+  print("~~~~~~~~~~~~~~~~~~~~~~~\n" + str(x) + " x "+str(y) + " = " + 
+ str(float(x)*float(y)) + "\n~~~~~~~~~~~~~~~~~~~~~~~")
+
+# the dividing function
+def divide(x,y):
+  print("~~~~~~~~~~~~~~~~~~~~~~~\n" + str(x)+" ÷ " + str(y) + " = " + str(float(x)/float(y)) + "\n~~~~~~~~~~~~~~~~~~~~~~~")
+
+# the subtracting function
+def subtract(x,y):
+  print("~~~~~~~~~~~~~~~~~~~~~~~\n" + str(x) + " - " + str(y) + " = " + str(float(x)-float(y)) + "\n~~~~~~~~~~~~~~~~~~~~~~~")
+
+# find hypotenuse
+def hypot(leg_a,leg_b):
+  print("~~~~~~~~~~~~~~~~~~~~~~~\n" + "Hypotenuse is: " + str(math.sqrt(int(leg_a)** 2 + int(leg_b** 2))) + "\n~~~~~~~~~~~~~~~~~~~~~~~")
+  
+# find leg
+def leg(hypo,leg):
+  print("~~~~~~~~~~~~~~~~~~~~~~~\n" + "Leg A = " + str(math.sqrt(int(hypo)** 2 - int(leg)** 2)) + "\n~~~~~~~~~~~~~~~~~~~~~~~")
+  
+# find square root
+def sqrt(x):
+  print("~~~~~~~~~~~~~~~~~~~~~~~\n" + "√" + str(x) + " = " + str(math.sqrt(float(x))) + "\n~~~~~~~~~~~~~~~~~~~~~~~")
+  print("the square root of " + str(x) + " is " + str(math.sqrt(x)))
+
+# the while loop will loop the what would you like to do until user selects end
+while act != "end":
+  act = input("What would you like to do?\n1. Add\n2. Multiply\n3. Divide\n4. Subtract\n5. Hypotenuse\n6. Leg\n7. Square Root\n8. End\n")
+  # check for addition
+  if act == "1" or str.lower(act) == "add":
+    add(float(input("First Number: \n")), float(input("Second Number: \n")))
+  #check for multiplication
+  elif act == "2" or str.lower(act) == "multiply":
+    multiply(float(input("First Number: \n")), float(input("Second Number: \n")))
+  #check for division
+  elif act == "3" or str.lower(act) == "divide":
+    divide(float(input("First Number: \n")), float(input("Second Number: \n")))
+  #check for subtraction
+  elif act == "4" or str.lower(act) == "subtract":
+    subtract(float(input("First Number: \n")), float(input("Second Number: \n")))
+  #check for hypotenuse calculation
+  elif act == "5" or str.lower(act) == "hypotenuse":
+    hypot(float(input("Leg A: \n")), float(input("Leg B: \n")))
+  #check for leg calculation
+  elif act == "6" or str.lower(act) == "leg":
+    leg(float(input("Hypotenuse: \n")), float(input("Leg B: \n")))
+  #check for square root
+  elif act == "7" or str.lower(act) == "square root":
+    sqrt(float(input("Number: \n")))
+  #check for end
+  elif act == "8" or str.lower(act) == "end":
+    print("~~~~~~~~~~~~~~~~~~~~~~~\n" + "Program Ended" + "\n~~~~~~~~~~~~~~~~~~~~~~~")
+  #check for invalid input
+  else:
+    print("~~~~~~~~~~~~~~~~~~~~~~~\n" + "Invalid Input" + "\n~~~~~~~~~~~~~~~~~~~~~~~")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
